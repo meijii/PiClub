@@ -54,15 +54,15 @@ namespace PiClub
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "790125114470969",
+               appSecret: "8d052d97af34ff19345706324e7737ac");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "124277634490-d2fdpr2sev705sngcb1144dofk5nfnnn.apps.googleusercontent.com",
+                ClientSecret = "rDdiQ2U9jLaa_DiwLKRIUrqP"
+            });
         }
     }
 }
