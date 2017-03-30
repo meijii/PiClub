@@ -1,6 +1,5 @@
 ﻿@model PiClub.Models.ExternalLoginListViewModel
 @using Microsoft.Owin.Security
-@model custom_social_buttons.Models.ExternalLoginListViewModel
 
 <h4>Use another service to log in.</h4>
 <hr />
@@ -24,7 +23,7 @@
                         {
                             <div class="col-md-4">
                                 <button type="submit" class="btn btn-block btn-social btn-google" id="@p.AuthenticationType" name="provider">
-                                    <i class="fa fa-google fa-align-left social-icon" style=""></i>Google
+                                    <i class="fa fa-google fa-align-left social-icon" style=""></i>
                                 </button>
                             </div>
                         }
@@ -33,7 +32,7 @@
                         {
                             <div class="col-md-4">
                                 <button type="submit" class="btn btn-block btn-social btn-facebook" id="@p.AuthenticationType" name="provider">
-                                    <i class="fa fa-facebook fa-align-left social-icon" style=""></i>Facebook
+                                    <i class="fa fa-facebook fa-align-left social-icon" style=""></i>
                                 </button>
                             </div>
                         }
