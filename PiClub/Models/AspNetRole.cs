@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PiClub
+namespace PiClub.Models
 {
     using System;
     using System.Collections.Generic;

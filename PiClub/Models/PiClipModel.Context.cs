@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PiClub
+namespace PiClub.Models
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class PiClubProductsShopModel : DbContext
+    public partial class Eunice_PiClubEntities : DbContext
     {
-        public PiClubProductsShopModel()
-            : base("name=PiClubProductsShopModel")
+        public Eunice_PiClubEntities()
+            : base("name=Eunice_PiClubEntities")
         {
         }
     

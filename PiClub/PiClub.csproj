@@ -191,18 +191,6 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="AspNetRole.cs">
-      <DependentUpon>ShopModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUser.cs">
-      <DependentUpon>ShopModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUserClaim.cs">
-      <DependentUpon>ShopModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="AspNetUserLogin.cs">
-      <DependentUpon>ShopModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CartController.cs" />
     <Compile Include="Controllers\FAQController.cs" />
@@ -210,31 +198,43 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MembershipsController.cs" />
     <Compile Include="Controllers\ShopController.cs" />
-    <Compile Include="C__MigrationHistory.cs">
-      <DependentUpon>ShopModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AspNetRole.cs">
+      <DependentUpon>PiClipModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUser.cs">
+      <DependentUpon>PiClipModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserClaim.cs">
+      <DependentUpon>PiClipModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNetUserLogin.cs">
+      <DependentUpon>PiClipModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C__MigrationHistory.cs">
+      <DependentUpon>PiClipModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\PiClipModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PiClipModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PiClipModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PiClipModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PiClipModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PiClipModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShopModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShopModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShopModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShopModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShopModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShopModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -266,9 +266,26 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
+    <EntityDeploy Include="Models\PiClipModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PiClipModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\PiClipModel.edmx.diagram">
+      <DependentUpon>PiClipModel.edmx</DependentUpon>
+    </Content>
     <None Include="Properties\PublishProfiles\PiClub - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\PiClub2 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
+    <Content Include="Models\PiClipModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PiClipModel.edmx</DependentUpon>
+      <LastGenOutput>PiClipModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\PiClipModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PiClipModel.edmx</DependentUpon>
+      <LastGenOutput>PiClipModel.cs</LastGenOutput>
+    </Content>
     <Content Include="preview.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -286,16 +303,6 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="ShopModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ShopModel.edmx</DependentUpon>
-      <LastGenOutput>ShopModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ShopModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ShopModel.edmx</DependentUpon>
-      <LastGenOutput>ShopModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -339,13 +346,6 @@
     <Content Include="Views\Memberships\Index.cshtml" />
     <Content Include="Views\Shop\Index.cshtml" />
     <Content Include="Views\FAQ\Index.cshtml" />
-    <EntityDeploy Include="ShopModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ShopModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="ShopModel.edmx.diagram">
-      <DependentUpon>ShopModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Views\Cart\ShoppingCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
